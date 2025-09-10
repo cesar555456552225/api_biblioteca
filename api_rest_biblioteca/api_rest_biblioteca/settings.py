@@ -42,13 +42,14 @@ INSTALLED_APPS = [
     'biblioteca',
 ]
 
-REST_FRAMEWORK={
-    'DEFAULT_PERMISSION_CLASSES':[
-        'rest_framework.permissions.allowany',
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
     ],
-    'DEFAULT_PAGINATION_CLASS ':'rest_framework.PageNumberPagination',
-    'PAGE_SIZE':10
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
 }
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
