@@ -27,7 +27,7 @@ class LibroViewsSet(viewsets.ModelViewSet):
     ordering_fields = ['titulo', 'fecha_publicacion']
     ordering = ['-fecha_publicacion']
 
-    @action(detail=True, methods=['get'])
+    @action(detail=False, methods=['get'])
     def disponibles(self, request):
         libros_disponibles = self.queryset.filter(disponible=True)
         serializer=self.get_serializer(libros_disponibles, many =True)
